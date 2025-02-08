@@ -5,25 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML with Styling</title>
-    <h3>Internal Styling</h3>
+</head>
+
+<body>
+    <h3 id="idSelector">InLine Styling</h3>
+    <p style="color: peru;background-color:brown;">This is Demo HTML Styling</p>
+
     <style>
         .internal {
             height: 500px;
             width: 500px;
             color: rgb(224, 167, 22);
-            background-color: rgba(2, 2, 19, 0.842);
+            background-color: green;
+           
         }
+        
     </style>
-    <link rel="stylesheet" href="./index.css">
-</head>
-
-<body>
-    <h3>InLine Styling</h3>
-    <p style="color: peru;background-color:black;">This is Demo HTML Styling</p>
-   
+    
     <h3> External Styling</h3>
-    <div class=" external internal " style="height: 200px;">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolor, nemo facilis neque voluptatem
+
+    <h3>Internal Styling</h3>
+    <link rel="stylesheet" href="./index.css">
+
+    <div class=" external" style="height: 250px; margin-bottom: 50px;">
+        <p><h4>Here external and internal code external is working</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolor, nemo facilis neque voluptatem
             reprehenderit tenetur? Aperiam saepe accusamus deleniti voluptate dolorem, et, ratione expedita quasi, minus
             esse porro magni rerum fugit a cumque veritatis soluta similique quae corrupti! Nihil nobis quidem omnis
             veritatis autem magnam assumenda quis, aperiam dolor quisquam qui temporibus tempora facilis laborum minima
@@ -31,9 +36,19 @@
             corrupti est sunt quia illum quaerat sit dolorum inventore assumenda error aliquam? Recusandae deleniti
             sequi provident, possimus quia iste quasi odio incidunt exercitationem reprehenderit, magni ab esse omnis
             magnam nobis.</p>
+
     </div>
-
-
+    <div class="internal" style="height: 200px ;   margin-top: 100x; margin-bottom: 25px;">
+        <p><b>Here internal is working </b><br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, veritatis.</p>
+    </div>
+    <div class="external" style="height:50px ; margin-top: 25px; margin-bottom: 25px;"><p><b>Here  external working</b> <br>Lorem ipsum dolor sit amet.</p></div>
+    <ol>
+        <li>Inline</li>
+        <li>Internal</li>
+        <li>external</li>
+    </ol>
+    <hr>
+    <a href="./intermediate.html"></a>
 
 </body>
 
