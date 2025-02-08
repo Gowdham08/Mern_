@@ -1,7 +1,28 @@
 .box-model{
     margin-top: 10px;
-    margin-left:10px;
     padding: 10px;
-    background-color: aquamarine;
-    border: 3px dotted grey;
+    background-color: rgb(236, 156, 71);
+    border: 3px dotted rgb(245, 46, 46);
+}
+.fixed-position{
+    position: fixed;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    margin-bottom: 100px;
+    width: 100vw;
+    padding: 10px;
+    background-color: rgb(156, 156, 27);
+
+}
+.container{
+    position: relative;
+    margin: 50px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(228, 194, 144);
+
 }
