@@ -1,0 +1,12 @@
+.float-left{
+    float: left;
+    margin: 10px;
+}
+.float-right{
+    float: right;
+    margin: 10px;
+}
+img{
+    border: 5px solid darkcyan;
+    opacity: 0.5px;
+}
