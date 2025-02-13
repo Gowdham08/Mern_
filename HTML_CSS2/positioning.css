@@ -36,8 +36,8 @@
     margin: 200px;
     position: relative;
     border: 5px dotted brown;
-    height: 500px;
-    width: 500px;
+    height: 250px;
+    width: 250px;
 }
 .abs-pos{
     position: absolute;

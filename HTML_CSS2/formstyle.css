@@ -11,12 +11,15 @@ input[text=number]{
     margin: 5px;
 }
 form{
-    margin: 35%;
+    margin-left:32% ;
+    margin-top: 175px;
+   
+    
 
     position: relative;
     background-color: bisque;
     border-radius: 20px;
-    width: 200px;
+    width: 250px;
     left: 10%;
 }
 button{
