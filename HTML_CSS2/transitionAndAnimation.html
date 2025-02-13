@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Animation</title>
+    <link rel="stylesheet" href="./transitionAndAnimation.css">
+    <style>
+        .transition {
+            color: dimgrey;
+            background-color: rgb(20, 20, 67);
+            transition: background-color 5s, color 5s, padding 5s, width 5s, height 5s, margin 5s;
+        }
+
+        .transition:hover {
+            background-color: dimgray;
+            color: beige;
+            padding: 30px;
+            height: 100px;
+            width: 300px;
+            margin: 200px;
+            transform: rotate(640deg);
+
+        }
+
+        @keyframes AnimationDiv {
+            0% {
+                left: 100px;
+                top: 0px;
+                opacity: 1;
+                background-color: chocolate;
+            }
+
+            25% {
+                left: 1000px;
+                top: 0px;
+                opacity: 0.5;
+                background-color: bisque;
+            }
+
+            50% {
+                left: 300px;
+                top: 500px;
+                opacity: 0;
+                background-color: chartreuse;
+            }
+            75%{
+                left: 300px;
+                top: 500px;
+                opacity:0.5;
+                background-color: blue;
+            }
+            100%{
+                left: 0px;
+                top: 0px;
+                opacity: 1;
+                background-color: black;
+            }
+
+            from {
+                background-color: aqua;
+            }
+
+            to {
+                background-color: chartreuse;
+            }
+
+        }
+
+        .animation {
+            animation-name: AnimationDiv;
+            background-color: orangered;
+            position:sticky;
+            width: 100px;
+            height: 100px;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is Transition</h1>
+    <h1 class="transition">This is a Transtion Example</h1>
+    <h1> This is Animation </h1>
+    <div class="animation">This is example of Animation</div>
+</body>
+
+</html>
