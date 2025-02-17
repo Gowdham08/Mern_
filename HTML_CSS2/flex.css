@@ -105,33 +105,8 @@ img{
         text-decoration: dashed;
         background-color: aliceblue;
     }
-    .container{
-        display: grid;
-        grid-template-columns:repeat(4,1fr);
-        background-color: rgb(17, 36, 36);
-        padding: 30px;
-        /* margin: 2px; */
-        height: 900px;
-        border: black;
-    
+    .display{
+        display: inline;
     }
-    .grid-items{
-        background-color: rgb(21, 1, 1);
-        color: bisque;
-        text-align: center;
-        margin: 2px;
-        height: 190px;
-        /* width: 500px; */
-        font-size: 15px;
-    
-    
-    }
-    img{
-        /* padding: 10px; */
-        height: 190px;
-        /* width: 200px; */
-        
-    }
-    
     
 }
