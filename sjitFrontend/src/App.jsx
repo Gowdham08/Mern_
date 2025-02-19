@@ -6,6 +6,7 @@ import Login from "./components/functionalcomponents/Login";
 import NavBar from "./components/functionalcomponents/NavBar";
 import Signup from "./components/functionalcomponents/Signup";
 import ClassCompEg from "./components/classcomponents/ClassCompEg";
+import UseEffect from "./components/functionalcomponents/Hooks/UseEffect";
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 function App() {
   return (
@@ -13,15 +14,17 @@ function App() {
       <BrowserRouter>
       <NavBar></NavBar>
       <Routes>
-        <Route path="/" element={<Home properties="Hello SJIT" sjit="hello"></Home>}></Route>
+        <Route path="/home" element={<Home properties="Hello SJIT" sjit="hello"></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/gallery" element={<Gallery></Gallery>}></Route>
+        <Route path="/use-effect" element={< UseEffect></ UseEffect>}></Route>
+        
       </Routes>
     </BrowserRouter>
-      <hr />
+      {/* <hr />
       <Home properties="Hello SJIT" sjit="hello"></Home>
       <hr />
       <ClassCompEg></ClassCompEg>
@@ -36,7 +39,7 @@ function App() {
       <Login></Login>
       <hr />
       <Signup></Signup>
-      <hr />
+      <hr /> */}
     </main>
   )
 }

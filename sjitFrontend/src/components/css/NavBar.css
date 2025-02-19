@@ -4,11 +4,11 @@
         background-color: aquamarine  ;
         color: brown;
         justify-content: space-around;
-        height: 30px;
-        padding: 10px;
+        /* height: 30px;
+        padding: 10px; */
     }
-    /* *{
-        margin: 0;
-        padding: 0;
-    } */
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
     
