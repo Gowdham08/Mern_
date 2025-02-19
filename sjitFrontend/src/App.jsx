@@ -21,7 +21,6 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
         <Route path="/use-effect" element={< UseEffect></ UseEffect>}></Route>
-        
       </Routes>
     </BrowserRouter>
       {/* <hr />
