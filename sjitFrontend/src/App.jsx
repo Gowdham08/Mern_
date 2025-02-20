@@ -1,5 +1,5 @@
-import Home from "./components/functionalcomponents/home";
-import About from "./components/functionalcomponents/about";
+import Home from "./components/functionalcomponents/Home";
+import About from "./components/functionalcomponents/About";
 import Contact from "./components/functionalcomponents/Contact";
 import Gallery from "./components/functionalcomponents/Gallery";
 import Login from "./components/functionalcomponents/Login";
