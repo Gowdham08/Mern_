@@ -21,17 +21,13 @@ function Signup(){
             <td><input type="date"></input></td>
             </tr>
             <tr>
-            <td> <label>Gender: </label></td>
-            <td><input type="radio" name="Gender"></input></td>
-            <td><label>Male</label></td>
-            <td><input type="radio" name="Gender"></input></td>
-            <td><label>Female</label></td>
-            <td><input type="radio" name="Gender"></input></td>
-            <td><label>Other</label></td>
-            <td><input type="radio"></input></td>
+            <td> <label htmlFor="Gender">Gender: </label></td>
+            <input type="radio" name="gender" value="Male" id="male"></input>Male
+            <input type="radio" name="gender" value="Female" id="female"></input>Female
+            <input type="radio" name="gender" value="Other" id="other"></input>Other
             </tr>
             <tr>
-                <button type="submit">Login</button>
+                <button type="submit">Signup</button>
             </tr>
             </table>
         </form>

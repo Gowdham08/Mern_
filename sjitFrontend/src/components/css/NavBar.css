@@ -4,11 +4,48 @@
         background-color: aquamarine  ;
         color: brown;
         justify-content: space-around;
-        /* height: 30px;
-        padding: 10px; */
+        height: 30px;
+        padding: 10px; 
+
     }
-    *{
+    body{
+        margin: 3px;
+        padding:0px;
+    }
+    /* .button{
+        color:rgb(232, 232, 17) ;
+        border: 1px solid rgb(213, 63, 63);
+        
+    } */
+    /* *{
         margin: 0px;
         padding: 0px;
+    } */
+    /* .link :hover{
+        background-color: black;
+        color: white;
+    } */
+
+
+    .dropdown{
+        position: relative;
+        display: inline-block;
+        top: 0px;
     }
-   
+
+    .dropdown-list{
+    display: block;
+    position: absolute;
+    background-color: rgb(230, 203, 219);
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 3px;
+    top: 2px;
+    box-shadow: 2px 9px 10px 0px rgba(0,0,0,0.75);
+    }
+    .dropdown-link{
+        text-decoration: none;
+        color: black;
+        padding: 5px;;
+
+    }

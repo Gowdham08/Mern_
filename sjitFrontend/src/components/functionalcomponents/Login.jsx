@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import "../css//form.css";
 function Login(){
     return(
         <div class="outer">
@@ -5,7 +7,7 @@ function Login(){
         <center>
             <form action="">
         <table>
-           <tr>
+        <tr>
                 <td><label>Email</label> </td>
                 <td><input type="email"></input></td>
             </tr>
@@ -18,6 +20,7 @@ function Login(){
             </tr>
         </table>
         </form>
+        <p> Create an Account <Link to="/signup">Signup</Link> </p>
         </center>
         </div>
     )
