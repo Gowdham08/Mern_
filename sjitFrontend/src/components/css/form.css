@@ -3,13 +3,12 @@ form {
     width: 255px;
     background-color:rgb(210, 203, 135);
     border-radius: 10px;
-} 
-
- button {
+}
+button {
     position: relative;
     left: 100px;
     background-color: rgba(90, 205, 205, 0.449);
     border-radius: 10px ;
     border: 1px solid;
 
-} 
+}
