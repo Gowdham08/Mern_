@@ -6,7 +6,8 @@ const trackingMyButtonComp = (Component) => {
         return (
             <form onClick={handleClick}>
                 Email : <input type="text" />
-                Password: <input type="text" />
+                <br />
+                Password: <input type="text" /><br />
                 <Component {...props} />
             </form>
         )
