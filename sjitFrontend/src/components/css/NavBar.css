@@ -1,17 +1,19 @@
-    nav{
+    nav {
         display: flex;
         list-style: none;
-        background-color: aquamarine  ;
+        background-color: aquamarine;
         color: brown;
-        justify-content: space-around;
+        justify-content: space-evenly;
         height: 30px;
-        padding: 10px; 
+        padding: 10px;
 
     }
-    body{
+
+    body {
         margin: 3px;
-        padding:0px;
+        padding: 0px;
     }
+
     /* .button{
         color:rgb(232, 232, 17) ;
         border: 1px solid rgb(213, 63, 63);
@@ -27,25 +29,27 @@
     } */
 
 
-    .dropdown{
+    .dropdown {
         position: relative;
         display: inline-block;
         top: 0px;
     }
 
-    .dropdown-list{
-    display: block;
-    position: absolute;
-    background-color: rgb(230, 203, 219);
-    list-style-type: none;
-    padding: 10px;
-    border-radius: 3px;
-    top: 2px;
-    box-shadow: 2px 9px 10px 0px rgba(0,0,0,0.75);
+    .dropdown-list {
+        display: block;
+        position: absolute;
+        background-color: rgb(230, 203, 219);
+        list-style-type: none;
+        padding: 10px;
+        border-radius: 3px;
+        top: 2px;
+        box-shadow: 2px 9px 10px 0px rgba(0, 0, 0, 0.75);
     }
-    .dropdown-link{
+
+    .dropdown-link {
         text-decoration: none;
         color: black;
-        padding: 5px;;
+        padding: 5px;
+        ;
 
     }
