@@ -18,13 +18,15 @@ import UseMemoize from "./components/functionalcomponents/Hooks/UseMemoize";
 import HoC from './components/functionalcomponents/HoC/HoC'
 import Parent from "./components/functionalcomponents/Memoization/Parent";
 import LazyLoadingAndSuspense from "./components/functionalcomponents/Memoization/LazyLoadingAndSuspense";
+//import StudentResult from "./components/functionalcomponents/ContextAPI/StudentResult";
+import CoE from "./components/functionalcomponents/CoE";
 function App() {
   return (
     <main>
       <BrowserRouter>
       <NavBar></NavBar>
       <Routes>
-        <Route path="/home" element={<Home properties="Hello SJIT" sjit="hello" />}></Route>
+        <Route path="/" element={<Home properties="Hello SJIT" sjit="hello" />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
@@ -40,6 +42,8 @@ function App() {
         <Route path="/hoc" element={<HoC/>}></Route>
         <Route path="/memo" element={<Parent></Parent>}></Route>
         <Route path="/lazy" element={<LazyLoadingAndSuspense></LazyLoadingAndSuspense>}></Route>
+        <Route path="/res" element={<CoE></CoE>}></Route>
+
       </Routes>
     </BrowserRouter>
     {/* <ClassCompEg></ClassCompEg> */}
@@ -48,7 +52,7 @@ function App() {
       <div>
         <hr />
       </div>
-     
+      
       <h1>Welcome to React</h1>
       <hr />
       <About></About>

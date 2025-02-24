@@ -7,7 +7,7 @@ const NavBar = () => {
 return (
    <header>
       <nav>
-         <li> <Link to ='/home'>Home</Link>  </li>
+         <li> <Link to ='/'>Home</Link>  </li>
          <li> <Link to ='/about'>About</Link> </li>
          <li> <Link to='/gallery'>Gallery</Link> </li>
         
@@ -32,6 +32,7 @@ return (
          </ul>)}
          </div>
 
+         <li><Link to='/res'>Context API</Link></li>
          <li><Link to='/hoc'>Hoc</Link></li>
          <li> <Link to='/contact'>Contact</Link> </li>
          <li> <Link to='/signup'>Signup</Link></li>
