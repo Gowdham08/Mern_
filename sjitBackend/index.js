@@ -2,6 +2,7 @@ const express = require("express");
 const mdb = require("mongoose"); //mdb=>mongoDB
 const dotenv = require("dotenv")
 const signup_Schema = require("./models/signupSchema")
+const bcrypt =require("bcrypt")
 const app = express();
 app.use(express.json());
 const PORT = 3001;
@@ -23,16 +24,17 @@ app.get("/", (req, res) => {
 app.get("/static", (req, res) => {
     res.sendFile("E:\\MERN\\index.html");
 });
-app.post("/signup", (req, res) => {
+app.post("/signup",async(req, res) => {
     try {
         console.log(req.body);
         const { firstName, lastName, email, password, phoneNumber } = req.body;
+        const hashedPassword= await bcrypt.hash(password,10)
         const newSignup = new signup_Schema({
             firstName: firstName,
             lastName: lastName,
             email: email,
             phoneNumber: phoneNumber,
-            password: password
+            password: hashedPassword
         });
         newSignup.save();
         console.log("SIGNUP SUCCESS");
@@ -43,5 +45,6 @@ app.post("/signup", (req, res) => {
     }
 });
 
+        
 
 app.listen(PORT, () => console.log("Server Started Successfully"));
