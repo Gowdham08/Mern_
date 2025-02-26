@@ -12,7 +12,7 @@ function Signup() {
     const [phoneNumber, setPhoneno] = useState(0);
     const handleSignUp = async (event) => {
         event.preventDefault()
-        const req = await axios.post("http://localhost:3001/signup", {
+        const req = await axios.post("https://poptraining-48urshkxa-gowdham08s-projects.vercel.app/signup",{
             firstName: firstName,
             lastName: lastName,
             email: email,
