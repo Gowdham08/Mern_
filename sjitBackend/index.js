@@ -3,7 +3,9 @@ const mdb = require("mongoose"); //mdb=>mongoDB
 const dotenv = require("dotenv")
 const signup_Schema = require("./models/signupSchema")
 const bcrypt =require("bcrypt")
+ const cors =require("cors"); //->npm i cors
 const app = express();
+app.use(cors())
 app.use(express.json());
 const PORT = 3001;
 dotenv.config();
@@ -43,6 +45,46 @@ app.post("/signup",async(req, res) => {
         console.log("ERROR", error);
         res.status(201).json({ message: "SIGNUP FAILED", isSignup: false });
     }
+});
+
+app.get('/getsignupdet',(res,req)=>{
+    const signup = signup_Schema.find()
+    console.log(signup);
+    res.send("Signup details fetched");
+
+});
+
+app.post("/login",async (req,res)=>{
+    try{
+        // console.log(req.body);
+        // console.log(email,password);
+        const{email,password} = req.body;
+        const existingUser=await signup_Schema.findOne({email:email})
+        console.log(existingUser);
+        // res.json({message:"Login Fetched"});
+        if(existingUser){
+            const isValidPassword= await bcrypt.compare(password,existingUser.password);
+            console.log(isValidPassword);
+            if(isValidPassword){
+                res.status(201).json({message:"Login Successful",isLoggedIn:true})
+
+            }
+            else{
+                res.status(201).json({message:"Incorrect Passwords",isLoggedIn:false})
+            }
+
+
+        }else{
+            res.status(201).json({message:"User not Found SignUp",isLoggedIn:false})
+        }
+
+    }
+    catch(error){
+        console.log("Login Error");
+        res.status(400).json({message:"Login Error Check your Code",isLoggedIn:false})
+    }
+
+
 });
 
         
