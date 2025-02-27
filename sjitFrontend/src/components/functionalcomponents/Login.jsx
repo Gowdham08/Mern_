@@ -1,29 +1,49 @@
-import { Link } from "react-router-dom";
+
 import "../css//form.css";
-function Login(){
-    return(
-        <div class="outer">
-        <h1><center>Login  Page</center></h1>
-        <center>
-            <form action="">
-        <table>
-        <tr>
-                <td><label>Email</label> </td>
-                <td><input type="email"></input></td>
-            </tr>
-            <tr>
-            <td> <label>Password</label></td>
-            <td> <input type="password"></input></td>
-            </tr>
-            <tr>
-                <button type="submit" >Login</button>
-            </tr>
-        </table>
-        </form>
-        <p> Create an Account <Link to="/signup">Signup</Link> </p>
-        </center>
-        </div>
-    )
-}
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+function Login() {
+        const [email, setEmail] = useState("");
+        const [password, setPass] = useState("");
+        const navigate = useNavigate()
+        const handleLogin = async (event) => {
+            event.preventDefault();
+            const req = await axios.post("http://localhost:3001/login",
+                {
+                    email: email,
+                    password: password
+                });
+
+            const message = req.data.message
+            const islogin = req.data.isLogin
+            if (islogin) {
+                console.log(islogin, message)
+                alert(message)
+                navigate('/about')
+            }
+            else {
+                console.log(islogin, message)
+                alert(message)
+            }
+
+        }
+        return (
+            <div>
+                <div class="login-edit">
+                    <h1>Login Page</h1>
+                    <form onSubmit={handleLogin}>
+                        <input type="email" id="email" placeholder="Email id" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                        <br />
+                        <input type="password" id="password" placeholder="Password" value={password} onChange={e => setPass(e.target.value)} />
+                        <br />
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+
+            </div>
+        )
+    }
+   
 export default Login;
 
