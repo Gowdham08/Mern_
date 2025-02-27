@@ -20,7 +20,7 @@ function Login() {
             if (islogin) {
                 console.log(islogin, message)
                 alert(message)
-                navigate('/about')
+                navigate('/')
             }
             else {
                 console.log(islogin, message)
