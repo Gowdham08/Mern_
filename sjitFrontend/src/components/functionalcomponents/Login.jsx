@@ -9,7 +9,7 @@ function Login() {
         const navigate = useNavigate()
         const handleLogin = async (event) => {
             event.preventDefault();
-            const req = await axios.post("http://localhost:3001/login",
+            const req = await axios.post("https://mern-5ons.onrender.com/login",
                 {
                     email: email,
                     password: password
